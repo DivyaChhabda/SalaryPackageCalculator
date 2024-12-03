@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <h1 style="align-items:center">Salary Packaging Calculator</h1>
+
+    <form id="salaryForm" class="mainForm">
+        <div class="col-md-12 form-group-inline">
+           
+            <label for="companyType">Company Type:</label>
+            <select id="companyType">
+                <option value="Corporate">Corporate</option>
+                <option value="Hospital">Hospital</option>
+                <option value="PBI">PBI</option>
+            </select>
+      
+        </div>
+        
+        <div class="col-md-12 form-group-inline">
+            <label>Employment Type:</label>
+            <select id="employmentType">
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Casual">Casual</option>
+            </select>
+        </div>
+        <div class="col-md-12 form-group-inline">
+            <label>Salary:</label>
+            <input type="number" id="salary" placeholder="Enter salary" required />
+        </div>
+        <div class="col-md-12 form-group-inline">
+            <label>Hours Worked (if part-time):</label>
+            <input type="number" id="hoursWorked" placeholder="Enter hours (if part-time)" />
+        </div>
+        <div class="col-md-12 form-group-inline">
+            <label>Education (Bachelor's degree or higher):</label>
+            <input  type="checkbox" id="isEducated" />
+            @* <label for="isEducated">Bachelor's degree or higher</label> *@
+        </div>
+        <button id="calculateButton" type="button" onclick="calculateSalary()">Calculate</button>
+        <p>Result: <span id="result"></span></p>
+    </form>
+  
+</body>
+<script src="~/js/salaryCalculator.js"></script>
+</html>
